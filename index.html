@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Elige tu Jugada</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/ppt.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>	
+<div class="contenido">
+<header id="header" class="header">
+<hgroup>
+<h1>¡Elige sabiamente!</h1>
+<h2>Piedra / Papel / Tijeras / Lagarto / Spock</h2>
+<h3>Inspirado en: <a href="http://es.wikipedia.org/wiki/The_Big_Bang_Theory">The Bing Bang Theory</a></h3>
+<h4>Agradecimientos a: 
+<a href="https://cursos.mejorando.la/cursos/programacion-basica/" title="Los mejores cursos Online">Curso de Programación Básica de Mejorandola</h4></a>
+</hgroup>
+</header>
+<div class="ajuste">
+<div id="selection">
+<input type="radio" name="opcion" value="piedra" id="piedra" onChange="revisar()">
+<input type="radio" name="opcion" value="papel" id="papel" onChange="revisar()">
+<input type="radio" name="opcion" value="tijeras" id="tijeras" onChange="revisar()">
+<input type="radio" name="opcion" value="lagarto" id="lagarto" onChange="revisar()">
+<input type="radio" name="opcion" value="spock" id="spock" onChange="revisar()">
+<label for="piedra"><img src="img/piedra.png"></label>
+<label for="papel"><img src="img/papel.png"></label>
+<label for="tijeras"><img src="img/tijeras.png"></label>
+<label for="lagarto"><img src="img/lagarto.png"></label>
+<label for="spock"><img src="img/spock.png"></label>
+<script type="text/javascript">circles();</script>
+</div>
+</div>
+<div id="fight">
+<div id="batalla">
+<div id="jugador1"></div>
+<div id="vs">
+<img src="img/vs.png">
+</div>
+<div id="jugador2"></div>
+<div id="resultado">
+<div id="win"><h6>YOU WIN!</h6></div>
+<div id="lost"><h6>YOU LOST <img src="img/lost.png"></h6></div>
+<div id="empate"><h6>EMPATE</h6></div>
+<div id="finish"></div>
+</div>
+</div></div>
+<p>Se aceptan <b>TODO</b> tipo de Críticas</p>
+<div class="fb-comments" data-href="http://nesslopz.hol.es/mejorandola/practicas/pptls/" data-numposts="10" data-colorscheme="dark"></div>
+</div>
+<footer>
+<a href="http://www.twitter.com/nesslopz" title="">Néstor López García</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,347 @@
+* { margin: 0; padding: 0}
+a {text-decoration: none;color: inherit;}
+img, body, form, video {max-width: 100%}
+
+body {
+	background: #34495e;
+	color: #34495e;
+	font-size: 18px;
+	font-family: Tahoma, sans-serif;
+}
+hgroup {
+	margin: 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+	display: block;
+}
+h1 {
+	background: rgba(52, 73, 94,.4);
+	border-radius: .5em;
+	font-size: 2em;
+	margin: .3em;
+	padding: .5em;
+}
+h2 {
+	font-size: .8em;
+	font-style: italic;
+}
+h3 {
+	font-size: 1em;
+}
+h4 {
+	font-size: 1.2em;
+}
+hgroup a {
+	background: rgba(26, 188, 156,.1);
+	border-radius: 4px;
+	display: inline-block;
+	margin: .1em 0;
+	padding: .1em 4px;
+}
+
+.contenido {
+	background: #ecf0f1;
+	border-radius: 1em;
+	box-shadow: 0 0 15px #333;
+	padding: .5em;
+	margin: 1em auto;
+	width: 980px;
+	max-width: 100%;
+	box-sizing:border-box;
+}
+hgroup {
+	text-align: center;
+}
+footer {
+	background: #566F76;
+	box-shadow:0 0 3px #ecf0f1;
+	border-radius: 8px;
+	bottom: 0;
+	color: #fff;
+	display: block;
+	margin: 5px 1em;
+	padding: .5em;
+}
+div.ajuste {
+	display: block;
+	height: 350px;
+}
+div#selection {
+	left: 50%;
+	margin-left: -150px;
+	max-width: 100%;
+	position: absolute;
+	width: 200px;
+-webkit-transform-origin:160px 160px;
+-moz-transform-origin:160px 160px;
+-ms-transform-origin:160px 160px;
+-o-transform-origin:160px 160px;
+transform-origin:160px 160px;
+}
+div#selection input[type=radio] {
+	display: none;
+}
+div#selection label {
+	height: 120px;
+	position: absolute;
+	text-align: center;
+	width: 120px;
+}
+div#selection label img {
+	width: 120px;
+	-webkit-transition:all .25s ease-out;
+	   -moz-transition:all .25s ease-out;
+	     -ms-transition:all .25s ease-out;
+	        -o-transition:all .25s ease-out;
+		  transition:all .25s ease-out;
+}
+div#selection label img:hover {
+	opacity: .8;
+-webkit-transform:scale(1.2);
+-moz-transform:scale(1.2);
+-o-transform:scale(1.2);
+-ms-transform:scale(1.2);
+transform:scale(1.2);
+}
+div#selection.jugar, div#selection.playagain {
+-webkit-animation: jugar 3s ease-out 0 1 forwards;
+   -moz-animation: jugar 3s ease-out 0 1 forwards;
+     -ms-animation: jugar 3s ease-out 0 1 forwards;
+       -o-animation: jugar 3s ease-out 0 1 forwards;
+	 animation: jugar 3s ease-out 0 1 forwards;
+}
+
+div#fight {
+	background: rgba(0,0,0,.7);
+	bottom: 0;
+	left: 0;
+	opacity:0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: -1;
+	-webkit-transition:opacity .5s 3s linear;
+	   -moz-transition:opacity .5s 3s linear;
+	     -ms-transition:opacity .5s 3s linear;
+	        -o-transition:opacity .5s 3s linear;
+		  transition:opacity .5s 3s linear;
+
+}
+div#fight.lucha, div#batalla.lucha  {
+	opacity: 1;
+	z-index: 1;
+}
+div#fight.again, div#batalla.again {
+	opacity: 0;
+	-webkit-transition:opacity 1s .4s ease-out;
+	   -moz-transition:opacity 1s .4s ease-out;
+	     -ms-transition:opacity 1s .4s ease-out;
+	        -o-transition:opacity 1s .4s ease-out;
+		  transition:opacity 1s .4s ease-out;
+}
+div#batalla {
+	background: #fff;
+	border-radius: .5em;
+	box-shadow: 0 0 1px #000,0 0 1em #999;
+	height: 80%;
+	left: 40px;
+	opacity: 0;
+	position: fixed;
+	right: 40px;
+	text-align: center;
+	top: 10%;
+	z-index: -1;
+	-webkit-transition:opacity 1s 3.5s linear;
+	   -moz-transition:opacity 1s 3.5s linear;
+	     -ms-transition:opacity 1s 3.5s linear;
+	        -o-transition:opacity 1s 3.5s linear;
+		  transition:opacity 1s 3.5s linear;
+}
+div#jugador1, div#jugador2 {
+background: #fff;
+background-position: center center;
+background-repeat: no-repeat;
+background-size: 100%;
+margin-top: -150px;
+min-height: 300px;
+min-width: 300px;
+position: absolute;
+top: 50%;
+-webkit-transition:right .5s 6s ease-out, left .5s 6s ease-out, opacity .5s 7s ease-out;
+   -moz-transition:right .5s 6s ease-out, left .5s 6s ease-out, opacity .5s 7s ease-out;
+     -ms-transition:right .5s 6s ease-out, left .5s 6s ease-out, opacity .5s 7s ease-out;
+        -o-transition:right .5s 6s ease-out, left .5s 6s ease-out, opacity .5s 7s ease-out;
+	  transition:right .5s 6s ease-out, left .5s 6s ease-out, opacity .5s 7s ease-out;
+}
+div#fight div#jugador1 {
+	left: 15px;
+}
+div#fight div#jugador2 {
+	right: 15px;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+div#fight.lucha #jugador1 {
+left: 38%;
+opacity: 0;
+}
+div#fight.lucha #jugador2 {
+right: 38%;
+opacity: 0;
+}
+div#fight.again #jugador1, div#fight.again #jugador2 {
+opacity: 1;
+-webkit-transition:opacity 0 1s, left 0 1s, right 0 1s;
+   -moz-transition:opacity 0 1s, left 0 1s, right 0 1s;
+     -ms-transition:opacity 0 1s, left 0 1s, right 0 1s;
+        -o-transition:opacity 0 1s, left 0 1s, right 0 1s;
+	  transition:opacity 0 1s, left 0 1s, right 0 1s;
+}
+
+div#fight.again #jugador1 { 
+	left: 15px;
+}
+div#fight.again #jugador2 { 
+	right: 15px;
+}
+div#vs {
+	display: block;
+	left: 50%;
+	margin:-150px 0 0 -150px;
+	position: absolute;
+	top:50%;
+	width: 300px;
+	-webkit-transition:opacity .5s 7.3s ease-out;
+	   -moz-transition:opacity .5s 7.3s ease-out;
+	     -ms-transition:opacity .5s 7.3s ease-out;
+	        -o-transition:opacity .5s 7.3s ease-out;
+		  transition:opacity .5s 7.3s ease-out;
+}
+div#fight.lucha #vs {
+	opacity: 0;
+}
+div#fight.again #vs {
+	opacity: 1;
+	-webkit-transition:opacity 0 1s;
+	   -moz-transition:opacity 0 1s;
+	     -ms-transition:opacity 0 1s;
+	        -o-transition:opacity 0 1s;
+		  transition:opacity 0 1s;
+}
+div#fight h6 {
+	color: #c0392b;
+	font-size: 5em;
+	letter-spacing: 6px;
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	text-shadow:0 0 4px #000, 1px 1px 0 #333, 2px 2px 0 #333, 3px 3px 0 #333, 4px 4px 0 #333, 5px 5px 0 #333, 6px 6px 0 #333, 12px 12px 10px #ccc;
+	top:0;
+	width: 100%;
+	-webkit-transition:opacity .5s 7.3s ease-out;
+	   -moz-transition:opacity .5s 7.3s ease-out;
+	     -ms-transition:opacity .5s 7.3s ease-out;
+	        -o-transition:opacity .5s 7.3s ease-out;
+		  transition:opacity .5s 7.3s ease-out;
+}
+div#fight.lucha .aplicar h6 {
+	opacity: 1;
+}
+div#fight.again h6 {
+	opacity: 0;
+	-webkit-transition:opacity 0 1s;
+	   -moz-transition:opacity 0 1s;
+	     -ms-transition:opacity 0 1s;
+	        -o-transition:opacity 0 1s;
+		  transition:opacity 0 1s;
+}
+div#resultado #finish {
+	/*background: #ddd;*/
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	bottom: 0;
+	display: block;
+	height: 300px;
+	left: 50%;
+	margin-left: -150px;
+	max-width: 100%;
+	position: absolute;
+	width: 300px;
+	opacity: 0;
+	-webkit-transition:opacity .5s 7.5s;
+	   -moz-transition:opacity .5s 7.5s;
+	     -ms-transition:opacity .5s 7.5s;
+	        -o-transition:opacity .5s 7.5s;
+		  transition:opacity .5s 7.5s;
+}
+div#fight.lucha #finish {
+opacity: 1;
+}
+div#fight.again #finish {
+	opacity: 0;
+	-webkit-transition:opacity 0 1s;
+	   -moz-transition:opacity 0 1s;
+	     -ms-transition:opacity 0 1s;
+	        -o-transition:opacity 0 1s;
+		  transition:opacity 0 1s;
+}
+
+
+@-webkit-keyframes jugar {
+    0%  {
+    	-webkit-transform: rotate(0deg);
+    }
+    100% {
+    	-webkit-transform: rotate(-2160deg);
+    }
+}
+@-moz-keyframes jugar {
+    0%  {
+    	-moz-transform: rotate(0deg);
+    }
+    100% {
+    	-moz-transform: rotate(-2160deg);
+    }
+}
+@-ms-keyframes jugar {
+    0%  {
+    	-ms-transform: rotate(0deg);
+    }
+    100% {
+    	-ms-transform: rotate(-2160deg);
+    }
+}
+@-o-keyframes jugar {
+    0%  {
+    	-o-transform: rotate(0deg);
+    }
+    100% {
+    	-o-transform: rotate(-2160deg);
+    }
+}
+@keyframes jugar {
+    0%  {
+    	transform: rotate(0deg);
+    }
+    100% {
+    	transform: rotate(-2160deg);
+    }
+}
+@media only screen and (max-width: 700px) {
+div#vs {
+	margin:-75px 0 0 -75px;
+	width: 150px;
+}
+div#jugador1, div#jugador2 {
+min-width: 100px;
+min-height: 100px;
+margin-top: -75px;
+max-width:150px;
+max-height:150px;	
+}
