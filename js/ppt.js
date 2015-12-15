@@ -31,7 +31,7 @@ var opcionMaquina = Math.floor(Math.random()*5);
 document.getElementById("selection").classList.add('jugar');
 setTimeout(function() {
     	document.getElementById("selection").classList.remove('jugar');
-    }, 3100); 
+    }, 3100);
           if (opcionUsuario == "piedra") {
 	jugadorUsuario.style.backgroundImage="url('img/rock-atack.jpg')";
         	if (opcionMaquina == piedra) {
@@ -168,12 +168,12 @@ setTimeout(function() {
      	}
 if (document.getElementById('fight').classList=="again") {
         document.getElementById('fight').classList.add('lucha');
-        document.getElementById('batalla').classList.add('lucha'); 
+        document.getElementById('batalla').classList.add('lucha');
         document.getElementById('fight').classList.remove('again');
         document.getElementById('batalla').classList.remove('again');
         }
     else {
-        document.getElementById('batalla').classList.add('lucha'); 
+        document.getElementById('batalla').classList.add('lucha');
         document.getElementById('fight').classList.add('lucha');
         }
 setTimeout(function() {
@@ -185,9 +185,9 @@ setTimeout(function() {
     ganador.classList.remove('aplicar');
     perdedor.classList.remove('aplicar');
     empate.classList.remove('aplicar');
-    resultado.style.backgroundImage="url('none')";
+    resultado.style.backgroundImage="url('')";
     }, 1000);
-}, 8000); 
+}, 8000);
 }
 
 
